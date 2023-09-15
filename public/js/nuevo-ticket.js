@@ -30,6 +30,7 @@ btnCrear.addEventListener('click', () => {
     socket.emit('siguiente-ticket', null, ( ticket ) => {
         lblNuevoTicket.innerText = ticket
     });
+    
 });
 
 

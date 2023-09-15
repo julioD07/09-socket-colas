@@ -16,7 +16,7 @@ const lblEscritorio = document.querySelector('#lblEscritorio')
 const btnAtender = document.querySelector('#btnAtender')
 const divAlerta = document.querySelector('#alerta')
 const divSmall = document.querySelector('#small')
-
+const lblPendientes = document.querySelector('#lblPendientes')
 
 lblEscritorio.innerText = escritorio
 divAlerta.style.display = 'none'
@@ -37,6 +37,18 @@ socket.on('disconnect', () => {
 
 socket.on('ultimo-ticket', (ultimoTicket) => {
     // lblNuevoTicket.innerText =  `Ticket ${ultimoTicket}`
+})
+
+socket.on('tickets-pendientes', (payload) => {
+    console.log(payload)
+
+    if (payload === 0) {
+        divAlerta.style.display = ''
+    } else {
+        
+    }
+
+    lblPendientes.innerText = payload
 })
 
 
