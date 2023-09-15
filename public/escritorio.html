@@ -11,13 +11,13 @@
 </head>
 
 <body class="container">
-    <h1 class="mt-5">Escritorio</h1>
+    <h1 class="mt-5" id="lblEscritorio">Escritorio</h1>
     <hr>
     <div class="row">
         <div class="col-8">
-            <h4>Atendiendo a <small class="text-primary">....</small></h4>
+            <h4>Atendiendo a <small class="text-primary" id="small">....</small></h4>
         
-            <button class="btn btn-primary mt-5">
+            <button class="btn btn-primary mt-5" id="btnAtender">
                 Atender siguiente ticket
             </button>
         </div>
@@ -25,7 +25,7 @@
         <div class="col-4 text-center">
             <h4>En cola</h4>
             
-            <div class="alert alert-info mt-2">
+            <div class="alert alert-info mt-2" id="alerta">
                 <span>Ya no hay más tickets</span>
             </div>
 
@@ -33,6 +33,7 @@
         </div>
     </div>
 
+    <script src="./socket.io/socket.io.js"></script>
     <script src="./js/escritorio.js"></script>
 
 </body>

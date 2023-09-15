@@ -85,6 +85,7 @@ class TicketControl {
         }
 
         this.guardarDB()
+        return ticket
     }
 
 }

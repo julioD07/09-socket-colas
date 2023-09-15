@@ -18,7 +18,11 @@ socket.on('disconnect', () => {
 
 
 socket.on('ultimo-ticket', (ultimoTicket) => {
-    lblNuevoTicket.innerText =  `Ticket ${ultimoTicket}`
+
+    if (ultimoTicket > 0){
+        lblNuevoTicket.innerText =  `Ticket ${ultimoTicket}`
+    } 
+
 })
 
 
